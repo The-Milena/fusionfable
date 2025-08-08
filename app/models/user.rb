@@ -3,4 +3,11 @@ class User < ApplicationRecord
   # :confirmable, :lockable, :timeoutable, :trackable and :omniauthable
   devise :database_authenticatable, :registerable,
          :recoverable, :rememberable, :validatable
+  has_many :recipe_requests, dependent: :destroy
+  has_many :saved_recipes, dependent: :destroy
+  has_many :recipes, through: :saved_recipes
+
+  validates :email, presence: true, uniqueness: true
+  validates :password, presence: { message: "Must be 6 characters or more" }, length: { minimum: 6 }
+
 end
