@@ -3,6 +3,6 @@ class DetectedIngredient < ApplicationRecord
   has_many :recipe_ingredients, dependent: :destroy
   has_many :recipes, through: :recipe_ingredients
 
-  vamidates :name, presence: true, uniqueness: true
+  validates :name, presence: true, uniqueness: true
   validates :recipe_request_id, presence: true
 end
