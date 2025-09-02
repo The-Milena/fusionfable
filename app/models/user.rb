@@ -9,5 +9,7 @@ class User < ApplicationRecord
 
   validates :email, presence: true, uniqueness: true
   validates :password, presence: { message: "Must be 6 characters or more" }, length: { minimum: 6 }
+  validates :first_name, presence: true
+  validates :last_name, presence: true
 
 end
