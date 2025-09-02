@@ -75,5 +75,5 @@ group :test do
 end
 
 gem "ostruct"
-
 gem "ruby-openai"
+gem "cloudinary"
