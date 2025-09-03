@@ -9,5 +9,9 @@ Rails.application.routes.draw do
 
   # Defines the root path route ("/")
   # root "posts#index"
-  get "fridgy", to: "pages#fridgy"
-end
+
+  get "fridgy", to: "pages#fridgy", as: :fridgy
+  post "fridgy", to: "pages#fridgy"
+  resources :recipe_requests, only: [:show], defaults: { turbo: false }
+
+  end

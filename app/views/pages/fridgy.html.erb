@@ -1,0 +1,9 @@
+<h1> Take a picture of your fridge and upload it here to get a recipe suggestion <h1>
+
+<%= simple_form_for @recipe_request, url: fridgy_path, method: :post do |f| %>
+  <%= f.input :photo,
+              as: :file,
+              label: "Upload Fridge Photo",
+              input_html: { accept: "image/*", capture: "environment", name: "photo" } %>
+  <%= f.button :submit, "Upload Photo", class: "button" %>
+<% end %>

@@ -1,0 +1,10 @@
+<h1>Your Fridge Photo</h1>
+<% if @recipe_request %>
+  <% if @recipe_request.photo_url.present? %>
+    <%= cl_image_tag @recipe_request.photo_url, width: 150%>
+  <% else %>
+    <p>No photo uploaded yet.</p>
+  <% end %>
+<% else %>
+  <p>Recipe request not found.</p>
+<% end %>
