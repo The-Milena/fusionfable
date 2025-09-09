@@ -23,6 +23,7 @@ class PagesController < ApplicationController
     # Save RecipeRequest to db and handle success/failure
     if @recipe_request.save
       puts "RecipeRequest saved with ID: #{@recipe_request.id}"  # Debug statement
+      AnalyseFridgePhotoJob.perform_later(@recipe_request.id)
       redirect_to recipe_request_path(@recipe_request), notice: "Photo uploaded! We're analyzing your fridge..."
     else
       flash.now[:alert] = "Failed to upload photo. Please try again."

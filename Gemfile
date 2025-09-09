@@ -77,3 +77,4 @@ end
 gem "ostruct"
 gem "ruby-openai"
 gem "cloudinary"
+gem "solid_queue"

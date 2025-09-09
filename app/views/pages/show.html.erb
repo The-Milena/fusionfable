@@ -2,10 +2,17 @@
 <% if @recipe_request %>
   <% if @recipe_request.photo_url.present? %>
     <%= cl_image_tag @recipe_request.photo_url, width: 150%>
+     <p>Photo uploaded successfully! Here are the ingredients we detected:</p>
+  <ul>
+    <% if @recipe_request.detected_ingredients.any? %>
+      <% @recipe_request.detected_ingredients.each do |ingredient| %>
+        <li><%= ingredient.name %></li>
+      <% end %>
   <% else %>
     <p>No photo uploaded yet.</p>
   <% end %>
+  </ul>
 <% else %>
   <p>Recipe request not found.</p>
 <% end %>
-
+<% end %>
