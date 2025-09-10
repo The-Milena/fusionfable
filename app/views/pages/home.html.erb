@@ -1,29 +1,28 @@
-
 <div class="container">
-
-  <! -- Title: COLLECTION -->
+  <!-- Title: COLLECTION -->
   <div class="row justify-content-center">
-    <div class="title-text text-center mb-4">
+    <div class="title-text text-center mb-4 mt-5">
       <h1>COLLECTION</h1>
-      <p>Find here below the collection of my coded projects. Have fun!</p>
+      <p>Find here below the collection of my coded projects</p>
     </div>
   </div>
 
-  <! -- card 1 - Fridgy -->
+  <!-- Card 1: Fridgy -->
   <div class="row justify-content-center">
-    <div class="col-12 col-lg-6">
-      <div class="card rounded" style="border-radius: 15px; overflow: hidden; border: none;">
-      <%= link_to fridgy_path do %>
-      <img src="https://res.cloudinary.com/dueooxybo/image/upload/v1757426644/debby-hudson-2dzhYsVhLVA-unsplash_atgf9l.jpg" class="card-img" alt="...">
-        <div class="card-img-overlay d-flex align-items-center justify-content-center">
-          <h5 class="card-title text-center mb-0" style="font-size: 2.5rem; color:Tomato">FRIDGY</h5>
+    <div class="col-12 col-lg-6 d-flex justify-content-center">
+      <div class="custom-card">
+        <div class="custom-card-content">
+          <h3>FRIDGY</h3>
+          <p>Get inspired and cook with what's left in your fridge ! <br> Receive a recipe suggestion based on the ingredients you have at disposal to minimise food waste.</p>
         </div>
-      <% end %>
+        <%= image_tag "https://res.cloudinary.com/dueooxybo/image/upload/v1757426644/debby-hudson-2dzhYsVhLVA-unsplash_atgf9l.jpg",
+                      class: "custom-card-img", alt: "Fridgy" %>
+        <a class="discover-btn fixed-bottom" href="/fridgy">Discover</a>
       </div>
     </div>
   </div>
 
-  <! -- Title: COLLABORATIONS -->
+  <!-- Title: COLLABORATIONS -->
   <div class="row justify-content-center">
     <div class="title-text text-center mb-4 mt-5">
       <h1>COLLABORATIONS</h1>
@@ -31,16 +30,17 @@
     </div>
   </div>
 
-  <! -- card 2 - Art Cartel -->
+  <!-- Card 2: Art Cartel -->
   <div class="row justify-content-center">
-    <div class="col-12 col-lg-6">
-      <div class="card rounded" style="border-radius: 15px; overflow: hidden; border: none;">
-        <%= link_to "https://www.artcartel.online/" do %>
-          <img src="https://res.cloudinary.com/dueooxybo/image/upload/v1757429223/penseurLogoNB_1_buodfr.png" class="card-img" alt="...">
-          <div class="card-img-overlay d-flex align-items-center justify-content-center">
-            <h5 class="card-title text-center mb-0" style="font-size: 2.5rem; color:Tomato">ART CARTEL</h5>
-          </div>
-        <% end %>
+    <div class="col-12 col-lg-6 d-flex justify-content-center mb-5">
+      <div class="custom-card">
+        <div class="custom-card-content">
+          <h3>ART CARTEL</h3>
+          <p>A fun game to play alone or with friends ! <br> Challenge yourself by guessing artist, location of production and age of production of different art pieces.</p>
+        </div>
+        <%= image_tag "https://res.cloudinary.com/dueooxybo/image/upload/v1757429223/penseurLogoNB_1_buodfr.png",
+                      class: "custom-card-img", alt: "Art Cartel", width: 40 %>
+        <a class="discover-btn fixed-bottom" href="https://www.artcartel.online/">Discover</a>
       </div>
     </div>
   </div>
