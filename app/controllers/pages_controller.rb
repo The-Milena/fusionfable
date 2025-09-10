@@ -35,4 +35,8 @@ class PagesController < ApplicationController
     @recipe_request = RecipeRequest.new
   end
   end
+
+  def data_policy
+  end
+
 end
