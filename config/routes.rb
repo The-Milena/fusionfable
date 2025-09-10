@@ -14,5 +14,7 @@ Rails.application.routes.draw do
   post "fridgy", to: "pages#fridgy"
   resources :recipe_requests, only: [:show], defaults: { turbo: false }
   get "data-policy", to: "pages#data_policy", as: :data_policy
+  get "about", to: "pages#about", as: :about
+  get "profile", to: "pages#profile", as: :profile
 
   end

@@ -39,4 +39,11 @@ class PagesController < ApplicationController
   def data_policy
   end
 
+  def about
+  end
+
+  def profile
+    @user = current_user
+  end
+
 end
